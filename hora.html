@@ -58,13 +58,41 @@
             font-style: italic;
         }
 
-        img {
+        imagem {
             border-radius: 50%;
             width: 200px;
             height: 200px;
         }
     </style>
 
+    <script>
+        function carregar() {
+            var msg = window.document.getElementById("msg");
+            var img = window.document.getElementById("imagem");
+            var data = new Date();
+            var hora = data.getHours();
+
+            msg.innerHTML = `Agora são ${hora} horas.`;
+
+        
+            if (hora >= 0 && hora < 12) {
+                img.src = "fotomanha.jpg";
+                document.body.style.background = "#99d2fb";
+            }
+
+        
+            else if (hora >= 12 && hora < 18) {
+                img.src = "fototarde.jpg";
+                document.body.style.background = "#fea903";
+            }
+
+       
+            else {
+                img.src = "fotonoite.jpg";
+                document.body.style.background = "#1d42b0";
+            }
+        }
+    </script>
 
 </body>
 </html>
