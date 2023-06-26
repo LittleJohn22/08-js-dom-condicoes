@@ -16,7 +16,7 @@
             Aqui vai aperecer mensagem...
         </div>
 
-        <div id="foto">
+        <div id="img">
             <img id="imagem" src="fotomanha.jpg" alt="Foto do dia">
         </div>
     </section>
@@ -58,7 +58,7 @@
             font-style: italic;
         }
 
-        foto {
+        img {
             border-radius: 50%;
             width: 200px;
             height: 200px;
@@ -70,7 +70,7 @@
             var msg = window.document.getElementById("msg");
             var img = window.document.getElementById("imagem");
             var data = new Date();
-            var hora = data.getHours()/2;
+            var hora = data.getHours();
 
             msg.innerHTML = `Agora são ${hora} horas.`;
 
